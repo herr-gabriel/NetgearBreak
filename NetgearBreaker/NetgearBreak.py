@@ -26,7 +26,7 @@ def Bruteforce():
         driver.find_element_by_id("ContentPlaceHolder1_txtSerial").send_keys(serial)
         driver.find_element_by_id("ContentPlaceHolder1_txtFirstname").click()
         driver.save_screenshot('screen.png')
-        time.sleep(3)
+        time.sleep(5)
 
         if IsElementPresent(driver):
             #Add to our valid serials list.
@@ -53,9 +53,10 @@ def IsElementPresent(webdriver):
 
 
 def WriteOut(validserials):
-    with open("output.csv", "w+") as list:
-        writer = csv.writer(list)
-        writer.writerows(list)
+	output = open("output.csv", 'wb')
+	wr = csv.writer(output, quoting=csv.QUOTE_ALL)
+	wr.writerow(validserials)
+    
 
 Bruteforce()
 
