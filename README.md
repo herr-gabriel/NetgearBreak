@@ -7,7 +7,8 @@ A Python-based tool to generate valid serial numbers for Netgear devices.
 Usage:
 - Run NetgearBreak.py
 - Select # of attempts (sky is the limit here)
-- Let it run
+- Let it run 
+- IF APPLICABLE: Allow access via Windows Firewall Popup for WebDriver
 - When it's done, check the directory where you executed it for a .csv file containing any valid serials found during the test.
 
 Why? 
